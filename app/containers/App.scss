@@ -1,0 +1,18 @@
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar, .center {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.sidebar {
+  overflow-y: scroll;
+}
+
+.center {
+  flex-grow: 1;
+}

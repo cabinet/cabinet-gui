@@ -29,6 +29,16 @@ const config = merge(baseConfig, {
           'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
         )
       }
+
+      {
+        test: /\.scss$/,
+        loaders: ExtractTextPlugin.extract(
+          'style-loader',
+          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+          'sass-loader',
+        )
+      }
+
     ]
   },
 

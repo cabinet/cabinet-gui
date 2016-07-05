@@ -1,0 +1,35 @@
+---
+  parser: babel-eslint
+  parserOptions:
+    ecmaVersion: 6
+    sourceType: "module"
+    ecmaFeatures:
+      jsx: true
+  plugins:
+    - react
+  env:
+    browser: true
+    es6: true
+  extends:
+    - "eslint:recommended"
+    - "plugin:react/recommended"
+  rules:
+    no-console: 0
+    comma-dangle: [2, "only-multiline"]
+    no-inner-declarations: 0
+    no-unused-vars: [2, { argsIgnorePattern: "^(nextState|prevState|err|error|reject|getState)$" }]
+    react/no-did-update-set-state: [1]
+    react/no-did-mount-set-state: [1]
+  globals:
+    Camera: true
+    Keyboard: true
+    PushNotification: true
+    __PLATFORM__: true
+    __PRODUCTION__: true
+    _store: true
+    cordova: true
+    device: true
+    jest: true
+    module: true
+    modules: true
+    require: true
