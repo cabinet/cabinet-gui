@@ -1,19 +1,19 @@
 body {
   position: relative;
-  color: white;
   height: 100vh;
-  background-color: #232C39;
-  background-image: linear-gradient(45deg, rgba(0, 216, 255, .5) 10%, rgba(0, 1, 127, .7));
+  /* background-color: #6C809A; */
+  background-color: #E5E6E4;
   font-family: Arial, Helvetica, Helvetica Neue;
   overflow-y: hidden;
+  margin: 0;
 }
 
 h2 {
   margin: 0;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: bold;
   letter-spacing: -.025em;
-  color: #fff;
+  color: #3C474B;
 }
 
 p {
@@ -25,7 +25,7 @@ li {
 }
 
 a {
-  color: white;
+  /* color: white; */
   opacity: .75;
   text-decoration: none;
 }

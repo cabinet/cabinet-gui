@@ -6,13 +6,37 @@
 .sidebar, .center {
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  // padding: 1em;
 }
 
 .sidebar {
-  overflow-y: scroll;
+  width: 25vw;
+
+  .sidebarItems {
+    overflow-y: scroll;
+  }
 }
 
 .center {
   flex-grow: 1;
+}
+
+h2.title {
+  padding: 0.3em;
+  color: #BCBDC0;
+  background-color: #3C474B;
+  text-align: center;
+}
+
+hr.separator {
+  width: 90%;
+}
+
+.test {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  padding: 2em;
 }
