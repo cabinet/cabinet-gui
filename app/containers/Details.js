@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 import styles from './Details.scss';
 
-export default class Details extends Component {
+class Details extends Component {
 
   constructor(props) {
     super(props)
