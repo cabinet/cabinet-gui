@@ -10,6 +10,7 @@
 }
 
 .sidebar {
+  composes: sidebarBackground from 'styles/colors.scss';
   width: 25vw;
 
   .sidebarItems {
@@ -18,6 +19,7 @@
 }
 
 .center {
+  composes: mainBackground from 'styles/colors.scss';
   flex-grow: 1;
 }
 

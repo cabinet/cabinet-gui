@@ -2,10 +2,11 @@ body {
   position: relative;
   height: 100vh;
   /* background-color: #6C809A; */
-  background-color: #E5E6E4;
+  /* background-color: #E5E6E4; */
   font-family: Arial, Helvetica, Helvetica Neue;
   overflow-y: hidden;
   margin: 0;
+  color: $textPrimaryColor from 'styles/colors.scss';
 }
 
 h2 {

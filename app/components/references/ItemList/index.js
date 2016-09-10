@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
-import styles from './ItemList.scss';
+import styles from './index.scss';
 
 export default class ItemList extends Component {
 

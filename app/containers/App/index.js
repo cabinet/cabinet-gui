@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
-import ItemList from './ItemList.js';
-import styles from './App.scss';
+import styles from './index.scss';
 
 export default class App extends Component {
   static propTypes = {
@@ -53,24 +52,11 @@ export default class App extends Component {
       <div className={ styles.app }>
 
         <div className={ styles.sidebar }>
-          <h2 className={ styles.title }>Items</h2>
-          <ItemList />
+          {/* Sidebar content here */}
         </div>
 
         <div className={ styles.center }>
-
-          <h2 className={ styles.title }>Details</h2>
-          { this.props.center }
-
-          <div className={ styles.test }>
-            {/* test content */}
-
-            <hr className={ styles.separator } />
-            Test request:
-
-            <button onClick={ this.getAll }> GET ALL </button>
-          </div>
-
+          {/* Main content here */}
         </div>
 
       </div>

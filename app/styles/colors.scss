@@ -1,0 +1,13 @@
+// Our palette: https://coolors.co/cfe9f7-485665-37a7f2-022f40-033f63
+$backgroundPrimaryColor: #CFE9F7;
+$backgroundSecondaryColor: #74A4BC;
+$textPrimaryColor: #022F40;
+
+
+.mainBackground {
+  background: $backgroundPrimaryColor;
+}
+
+.sidebarBackground {
+  background: $backgroundSecondaryColor;
+}
