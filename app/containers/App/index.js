@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
+import CabinetAPI from 'api/index.js';
+
 import styles from './index.scss';
 
 export default class App extends Component {
@@ -11,48 +13,47 @@ export default class App extends Component {
   constructor(props) {
     super(props);
 
-    this.getAll = this.getAll.bind(this);
+    this._getAll = this._getAll.bind(this);
+
+    this.state = {
+      items: [],
+    };
   }
 
-  getAll() {
-    const url = "http://localhost:5000/api/v1"
-    const myHeaders = new Headers({
-      "Content-Type": "application/json",
-    })
+  _getAll() {
+    // test data
+    const account_id = 'my-name@my-company.com'
+    const password = 'asdfasdf'
+    const vault_name = 'test-vault'
 
-    const payload = {
-        "method": "App.get_all",
-        "params": null,
-        "jsonrpc": "2.0",
-        'id': 0,
-    }
-
-    const request = new Request(url, {
-      method: 'POST',
-      headers: myHeaders,
-      body: JSON.stringify(payload),
-      mode: 'cors',
-      cache: 'default'
-    })
-
-    fetch(request)
+    CabinetAPI
+      .openVault(account_id, password, vault_name)
+      .then(() => {
+        return CabinetAPI.getAll();
+      })
       .then(response => {
-        // Convert to JSON
-        return response.json();
-      }).then(function(j) {
-        // `j` is a JavaScript object
-        console.log(j);
+        this.setState({ items: Object.keys(response.result) });
       });
-
   }
 
   render() {
+
+    const items = [];
+    this.state.items.forEach(i => {
+      items.push(<li key={ i }>{ i }</li>);
+    });
 
     return (
       <div className={ styles.app }>
 
         <div className={ styles.sidebar }>
           {/* Sidebar content here */}
+          <button onClick={ this._getAll }>Get all</button>
+          <hr />
+
+          <ul>
+            { items }
+          </ul>
         </div>
 
         <div className={ styles.center }>
