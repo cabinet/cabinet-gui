@@ -4,8 +4,8 @@ export default {
     // In order for this to work you need to start the rpc server manually and
     // replace these values.
     // TODO: start server automatically
-    const port = 40962;
-    const token = 'V_QImLa9qudPg0rXLoeZvwR2LQpqFL77stHPm5yHTDs';
+    const port = 5555; // set the proper port here
+    const token = 'server-token-needs-to-be-set-here';
 
     const url = `http://localhost:${port}/api/v1`
     const myHeaders = new Headers({
